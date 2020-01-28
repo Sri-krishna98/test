@@ -25,6 +25,7 @@
 
 ## Q2 Configure Apache2 HTTP server on a GCE VM instance and setup an email alert notification which triggers when the health check of the instance fails. Use console.
 
+---
 * Installing Stackdriver on the VM Instance
 ```
 curl -sSO https://dl.google.com/cloudagents/install-monitoring-agent.sh
