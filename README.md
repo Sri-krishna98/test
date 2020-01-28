@@ -55,7 +55,7 @@ dd if=/dev/zero of=/dev/null
 
 # Q3 Create a Cloud Function to convert the pub/sub message to json file and store it in GCS bucket\
 
- First Create a pub/sub
+> First Create a pub/sub
 ---
 ![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3a.PNG?raw=true)
 
