@@ -55,20 +55,20 @@ dd if=/dev/zero of=/dev/null
 
 # Q3 Create a Cloud Function to convert the pub/sub message to json file and store it in GCS bucket\
 
-> First Create a pub/sub
+* First Create a pub/sub
 ---
 ![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3a.PNG?raw=true)
 
- Then Click on the Trigger Cloud Function
+* Then Click on the Trigger Cloud Function
 --- 
-Use the main.py and requirements.txt to create the cloud function using Python Inline Editor
+* Use the main.py and requirements.txt to create the cloud function using Python Inline Editor
 ---
 
 * main.py [Link](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/main.py)
 * requirements.txt [Link](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/requirements.txt)
 ![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3d.PNG?raw=true)
  
- Create any random subscriber and publish a message in the json format as shown below
+* Create any random subscriber and publish a message in the json format as shown below
 ---
 
 ```
@@ -79,6 +79,6 @@ Use the main.py and requirements.txt to create the cloud function using Python I
 ```
 ![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3b.PNG?raw=true)
 
-The Cloud function will be triggered and a json file will be created in the Destination mentioned in the message.
+* The Cloud function will be triggered and a json file will be created in the Destination mentioned in the message.
 ---
 ![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3c.PNG?raw=true)
