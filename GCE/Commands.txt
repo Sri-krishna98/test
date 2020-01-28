@@ -1,0 +1,44 @@
+gcloud compute instances create gcp-krishna \
+    --machine-type f1-micro \
+    --image-family ubuntu-1604-lts \
+    --image-project ubuntu-os-cloud \
+    --boot-disk-size 10GB  \
+    --zone us-east1-b
+
+
+gcloud compute disks resize gcp-krishna --zone=us-east1-b --size 50
+
+# Restart the instance to make the changes affect inside the VM
+gcloud compute instances stop gcp-krishna --zone=us-east1-b
+gcloud compute instances start gcp-krishna --zone=us-east1-b
+
+# Create a bucket
+gsutil mb gs://gcpbktkrishna/
+
+# Create second bucket for later operations
+gsutil mb gs://gcpbktkrishna2/
+
+# Create files for transfer operations
+echo 'this is the 1st a test file.' > testfile.txt
+echo 'this is the 2nd test file' > testfile2.txt
+
+# Transfer a local file from PC to the bucket
+gsutil cp test1.txt gs://gcpbktkrishna/
+
+# Transfer another file to the same bucket as above for other operations
+gsutil cp test2.txt gs://gcpbktkrishna/
+
+# Remove the local 'test2.txt' in your PC
+rm testfile2.txt
+
+# Transfer file from one bucket to another
+gsutil cp gs://gcpbktkrishna/testfile.txt gs://gcpbktkrishna2/
+
+# Download a file from bucket to the local PC
+gsutil -m cp gs://gcpbktkrishna/testfile2.txt
+
+# List all the objects within a bucket
+gsutil ls -r gs://gcpbktkrishna/**
+
+# Delete all objects in a bucket, not the bucket
+gsutil rm gs://gcpbktkrishna/**
