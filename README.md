@@ -73,6 +73,6 @@ dd if=/dev/zero of=/dev/null
 "content":'{"source": "pub/sub", "destination": "gcs"}'
 }
 ```
-https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3b.PNG?raw=true)
+![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3b.PNG?raw=true)
 ## The Cloud function will be triggered and a json file will be created in the Destination mentioned in the message.
 ![Image](https://github.com/Sri-krishna98/GCP/blob/master/Cloud%20Function-SD-PubSub/Q3/Q3c.PNG?raw=true)
